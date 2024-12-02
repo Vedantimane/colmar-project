@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically on mobile */
+    gap: 8px;
+    margin-top: 16px;
+    padding: 0;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically on mobile */
+    gap: 16px;
+    padding: 16px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+
+.text-section h1 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 16px;
+}
+
+.text-section p {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 16px;
+}
+
+.text-section .cta-button {
+    width: 100%; /* Button takes full width on mobile */
+    padding: 12px;
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 16px;
+}
+
+.footer {
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer .bottom-bar {
+    display: flex;
+    flex-direction: column; /* Stack links on mobile */
+    gap: 8px;
+}
+.card-title{
+    background-color: gainsboro;
+
+}
+/* Responsive styles for tablets (768px and above) */
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row; /* Align items horizontally */
+        justify-content: space-between;
+    }
+
+    .navbar .nav-links {
+        flex-direction: row; /* Horizontal alignment */
+        gap: 16px;
+    }
+
+    .main-content {
+        flex-direction: row; /* Side-by-side layout */
+        gap: 24px;
+    }
+
+    .text-section h1 {
+        font-size: 28px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+
+    .footer .bottom-bar {
+        flex-direction: row; /* Horizontal links */
+        justify-content: space-between;
+    }
+}
+
+/* Responsive styles for desktops (1024px and above) */
+@media (min-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns */
+    }
+
+    .main-content {
+        padding: 32px;
+    }
+
+    .text-section h1 {
+        font-size: 32px;
+    }
+
+    .cta-button {
+        width: auto; /* No longer full width */
+    }
+}
